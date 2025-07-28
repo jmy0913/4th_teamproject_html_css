@@ -1,0 +1,137 @@
+{% load static %}
+
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JemBot - AI 채팅</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- 왼쪽 사이드바 - 대화 목록 -->
+        <aside class="sidebar left-sidebar">
+            <div class="sidebar-header">
+                <h2>대화 목록</h2>
+                <button class="new-chat-btn" id="chatplus">+</button>
+            </div>
+            
+            <div class="chat-list">
+                <div class="chat-item active">
+                    <div class="chat-info">
+                        <p class="chat-date">2025/07/17 오후</p>
+                        <p class="chat-time">02:39</p>
+                    </div>
+                    <button class="delete-btn" type="button">🗑️</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 중앙 메인 채팅 영역 -->
+        <main class="main-content">
+            <!-- 채팅 헤더 -->
+            <header class="chat-header">
+                <div class="level-buttons">
+                    <button class="level-button">초급</button>
+                    <button class="level-button active">중급</button>
+                    <button class="level-button">고급</button>
+                </div>
+            </header>
+
+            <!-- 채팅 메시지 영역 -->
+            <div class="chat-messages">
+                <!-- 사용자 메시지 -->
+                <div class="message user-message">
+                    <div class="message-content">
+                        <div class="message-text">
+                            LG화학 재무재표 요약해줘
+                        </div>
+                        <div class="message-time">14:39</div>
+                    </div>
+                </div>
+
+                <!-- 봇 메시지 -->
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <div class="message-header">
+                            <span class="bot-name">JemBotMessage</span>
+                            <span class="message-time">Today 14:39</span>
+                        </div>
+                        <div class="level-badge">중급</div>
+                        <div class="message-text">
+                            안녕하세요! LG화학의 재무 데이터를 분석하여 설명해드릴게요.<br><br>
+                            📊 **연도별 주요 실적**<br><br>
+                            **💰 2023년 💰**<br>
+                            - 매출: 55,249억 원<br>
+                            - 영업이익: 2,529억 원<br>
+                            - 당기순이익: 2,053억 원<br><br>
+                            **💰 2024년 💰**<br>
+                            - 매출: 48,916억 원<br>
+                            - 영업이익: 917억 원<br>
+                            - 당기순이익: 515억 원<br><br>
+                            **성장 변화**를 보면, 매출은 2023년 대비 2024년에 약 11.4% 감소하여 48,916억 원을 기록했습니다. **영업이익은 같은 기간 약 63.8% 감소했고, 순이익은 약 74.9% 감소했습니다.**<br><br>
+                            🔥 **주요화학반**, 매출과 수익성이 악화되는 흐름을 보이고 있어, 특히 영업이익과 순이익의 큰 감소가 눈에 띕니다. 이는 비즈니스나 시장 환경의 변화 등 다양한 요인이 있을 수 있으며, 안정성 또는 미래 전망을 추가 분석이 필요할 수 있습니다.<br><br>
+                            더 궁금한 항목이 있으시면 언제든지 질문해주세요!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 메시지 입력 영역 -->
+            <div class="message-input-area">
+                <div class="input-container">
+                    <input type="text" placeholder="재무 데이터 RAG에게 물어보기" class="message-input">
+                    <button class="send-btn">→</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- 오른쪽 사이드바 - 뉴스/주식 -->
+        <aside class="sidebar right-sidebar">
+            <div class="sidebar-header">
+                <div class="tab-buttons">
+                    <button class="tab-button active">뉴스</button>
+                    <button class="tab-button">주식</button>
+                </div>
+            </div>
+            
+            <div class="news-list">
+                <div class="news-item">
+                    <div class="news-category">경제 1분 전</div>
+                    <div class="news-title">[브릿지 칼럼] 섬 여행도 AI 시대</div>
+                    <div class="news-description">AI 기술이 여행 산업에 미치는 영향과 변화</div>
+                </div>
+                
+                <div class="news-item">
+                    <div class="news-category">경제 1분 전</div>
+                    <div class="news-title">"URL 누르지 마세요"...금융당국, '소비쿠폰 사칭' 경보 발령</div>
+                    <div class="news-description">피싱 사기 주의보 및 예방 방법 안내</div>
+                </div>
+                
+                <div class="news-item">
+                    <div class="news-category">경제 1분 전</div>
+                    <div class="news-title">기보-신한은행, '주력산업 위기 극복 지원' 협약</div>
+                    <div class="news-description">산업 위기 극복을 위한 금융 지원 협력</div>
+                </div>
+                
+                <div class="news-item">
+                    <div class="news-category">경제 1분 전</div>
+                    <div class="news-title">넷마블 '레이븐2'·'RF 온라인 넥스트' 모바일 MMORPG 흥행</div>
+                    <div class="news-description">모바일 게임 시장에서의 성공과 전략</div>
+                </div>
+            </div>
+
+            <!-- 검색바 -->
+            <div class="search-area">
+                <div class="search-container">
+{#                    <button class="search-nav-btn">←</button>#}
+                    <input type="text" placeholder="검색어를 입력하세요" class="search-input">
+                    <button class="search-nav-btn">🔍</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
