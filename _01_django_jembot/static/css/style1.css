@@ -186,7 +186,7 @@ body {
 
 .message {
     margin-bottom: 20px;
-    animation: fadeInUp 3s ease;
+    /*animation: fadeInUp 3s ease;*/
 }
 
 @keyframes fadeInUp {

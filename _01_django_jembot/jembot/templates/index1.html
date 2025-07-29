@@ -14,7 +14,7 @@
         <!-- 왼쪽 사이드바 - 대화 목록 -->
         <aside class="sidebar left-sidebar">
             <div class="sidebar-header">
-                <h2>대화 목록</h2>
+                <h2>대화 목록 | {{ nickname.nickname }} {{ nickname.user.name }}</h2>
                 <button class="new-chat-btn" id="chatplus">+</button>
             </div>
             
@@ -34,8 +34,8 @@
             <!-- 채팅 헤더 -->
             <header class="chat-header">
                 <div class="level-buttons">
-                    <button class="level-button">초급</button>
-                    <button class="level-button active">중급</button>
+                    <button class="level-button active">초급(기본)</button>
+                    <button class="level-button">중급</button>
                     <button class="level-button">고급</button>
                 </div>
             </header>
@@ -133,5 +133,6 @@
             </div>
         </aside>
     </div>
+    <script src="{% static 'js/js1.js' %}"></script>
 </body>
 </html>
